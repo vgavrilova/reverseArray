@@ -8,9 +8,10 @@ public class Main {
     public static void main(String[] args) {
 
         int[] arr = getArr();
+        System.out.println("The entered array: " + Arrays.toString(arr));
         reverse(arr);
-        //int[] arr = {1, 2, 3, 4, 5, 2, 6, 7, 8, 9, 78};
-        //reverse(arr);
+        System.out.println("The reversed array: " + Arrays.toString(arr));
+
     }
 
     // a method that gets an array from a user
@@ -33,16 +34,14 @@ public class Main {
     }
 
     private static void reverse(int[] arr){
-        System.out.println("The entered array: " + Arrays.toString(arr));
 
-        int len;
+        // save tha last value of an array in a variable
+        int len = arr.length-1;
         // a temporary variable where the current value will be saved
         int temp;
 
         // go through the array.length / 2 (we need to check only the half of the array)
         for(int i = 0; i < arr.length / 2; i++){
-            // save tha last value of an array in a variable
-            len = arr.length-1;
 
             // swap the beginning with the end
             temp = arr[i];
@@ -51,7 +50,6 @@ public class Main {
 
             //System.out.println(arr[i] + " " + arr[len-i]);
         }
-        System.out.println("The reversed array: " + Arrays.toString(arr));
 
     }
 }
